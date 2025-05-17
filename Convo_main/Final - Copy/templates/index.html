@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voice Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <!-- Animated Background & Particles -->
+  <div id="tsparticles" class="particles-bg"></div>
+
+  <!-- Setup Panel -->
+  <div id="setup" class="setup" role="form" aria-label="Chat setup">
+    <label for="name">Name</label>
+    <input id="name" type="text" placeholder="Your name" />
+    <label for="age">Age</label>
+    <input id="age" type="number" placeholder="Your age" />
+    <label>
+      <input id="rag" type="checkbox" /> Enable RAG
+    </label>
+    <button id="start-btn" type="button">Start Chat</button>
+  </div>
+
+  <!-- Chat Panel -->
+  <div id="chat-container" class="chat-container" style="display:none;">
+    <div id="chat-box" class="chat-box" role="log" aria-live="polite"></div>
+    <div id="rec-indicator" class="rec-indicator">● Recording…</div>
+    <!-- Debug flash overlay -->
+    <div id="debug-flash" class="debug-flash"></div>
+  </div>
+
+  <!-- Move mic button to very end so it’s topmost -->
+  <button id="mic-btn" class="mic-btn" aria-label="Hold to record">
+    <!-- inline SVG microphone icon -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"/>
+      <path d="M19 11a1 1 0 0 1-2 0 5 5 0 0 1-10 0 1 1 0 0 1-2 0 7 7 0 0 0 6 6.92V21h-3a1 1 0 1 1 0-2h4 a1 1 0 0 1 0 2h-3v-3.08A7 7 0 0 0 19 11z"/>
+    </svg>
+    <span class="mic-label">Hold to Record</span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles" defer></script>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  <script defer>
+    window.addEventListener('load', () => {
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: false },
+        particles: {
+          number: { value: 30 },
+          color: { value: "#ae00ff" },
+          opacity: { value: 0.2 },
+          size: { value: 2 },
+          move: { enable: true, speed: 0.4 },
+          links: { enable: true, color: "#7f00a0", opacity: 0.15 }
+        },
+        background: { color: "transparent" }
+      });
+    });
+  </script>
+</body>
+</html>
