@@ -79,7 +79,7 @@ From knowledge bases to contracts, Convo brings your content into the conversati
 bash 
 
 # Clone the repository
-git clone https://github.com/lifelesscycle/Convo.git
+git clone https://github.com/ShivanshSSS/Convo-The-Conversational-AI/
 
 # Navigate to project directory
 cd Convo
