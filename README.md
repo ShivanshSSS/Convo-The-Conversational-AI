@@ -82,10 +82,13 @@ bash
 git clone https://github.com/ShivanshSSS/Convo-The-Conversational-AI/
 
 # Navigate to project directory
-cd Convo
+cd Convo-The-Conversational-AI
 
 # Install dependencies
 pip install -r requirements.txt
+
+#Move to main directory
+cs Final
 
 # Initialize chat boy 
 python chat.py
