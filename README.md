@@ -26,6 +26,7 @@ Convo doesn’t just talk—it understands.
 #### 1. **True Voice-to-Voice Interaction**
 
 -   Conversational turn-taking with no need to press buttons or say “Hey” every time
+-   interruptable speech output for true natural conversations.
 -   Bidirectional audio makes conversations feel organic and human
     
 
@@ -147,7 +148,7 @@ The system includes several pre-configured voice profiles:
 
 -   Python 3.8+
 -   PyTorch 1.9+
--   CUDA-compatible GPU recommended for optimal performance
+-   CUDA-compatible GPU (1+ GB VRAM) recommended for optimal performance
 -   Minimum 8GB RAM (16GB+ recommended)
 -   Microphone and speakers/headphones
 
